@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">CareCaT1</string>
+    <string name="app_name" translatable="false">CareCaT1</string>
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password_for_test">Password (optional)</string>
+    <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in test</string>
     <string name="error_invalid_email">This email address is invalid</string>
@@ -13,4 +13,27 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <!-- Nav -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_chat">Chat</string>
+    <string name="title_Person">Person</string>
+    <!-- Drawer -->
+    <string name="drawer_open">開啟</string>
+    <string name="drawer_close">關閉</string>
+    <string name="drawer_1">關於我們</string>
+    <string name="drawer_2">照顧合約</string>
+    <string name="drawer_3">居家服務</string>
+    <string name="drawer_4">照顧服務員</string>
+    <string name="drawer_5">居家護理師</string>
+    <string name="drawer_6">醫療轉介</string>
+    <string name="drawer_7">長期照護中心</string>
+    <string name="drawer_8">關於</string>
+    <string name="drawer_9">常見問題</string>
+    <string name="drawer_10">找合作</string>
+    <string name="drawer_11">系統</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>
