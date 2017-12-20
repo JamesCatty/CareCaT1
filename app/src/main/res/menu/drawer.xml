@@ -46,6 +46,10 @@
         <item
             android:id="@+id/drawer_11"
             android:title="@string/drawer_11" />
+
+        <item
+            android:id="@+id/drawer_12"
+            android:title="@string/drawer_12" />
     </group>
 
 </menu>

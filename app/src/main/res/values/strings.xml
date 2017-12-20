@@ -29,11 +29,15 @@
     <string name="drawer_5">居家護理師</string>
     <string name="drawer_6">醫療轉介</string>
     <string name="drawer_7">長期照護中心</string>
-    <string name="drawer_8">關於</string>
-    <string name="drawer_9">常見問題</string>
-    <string name="drawer_10">找合作</string>
-    <string name="drawer_11">系統</string>
+    <string name="drawer_8">護理之家</string>
+    <string name="drawer_9">關於</string>
+    <string name="drawer_10">常見問題</string>
+    <string name="drawer_11">找合作</string>
+    <string name="drawer_12">系統</string>
+    <!-- About -->
     <string name="title_activity_about">AboutActivity</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <!-- CareCentre -->
+    <string name="title_activity_care_centre">CareCentreActivity</string>
 </resources>

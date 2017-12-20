@@ -1,5 +1,6 @@
 package app.test.carecat.carecat1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigation_view;
     private Toolbar toolbar;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         // 用toolbar做為APP的ActionBar
-        setSupportActionBar(toolbar);
+        // setSupportActionBar(toolbar);
 
         // 將drawerLayout和toolbar整合，會出現「三」按鈕
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -49,10 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
                 // 依照id判斷點了哪個項目並做相應事件
                 if (id == R.id.drawer_1) {
-
-                } else if (id == R.id.drawer_2) {
-                    // 按下「使用說明」要做的事
-
+                    intent = new Intent(MainActivity.this, AboutActivity.class);
+                    startActivity(intent);
+                } else if (id == R.id.drawer_7) {
+                    intent = new Intent(MainActivity.this, CareCentreActivity.class);
+                    startActivity(intent);
+                } else if (id == R.id.drawer_8) {
+                    intent = new Intent(MainActivity.this, CareCentreActivity.class);
+                    startActivity(intent);
                 }
 
 
