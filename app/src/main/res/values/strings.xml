@@ -43,4 +43,7 @@
     <!-- SingleCentre -->
     <string name="title_activity_single_centre">SingleCentreActivity</string>
     <string name="category_SingleCentre">機構類別</string>
+    <string name="title_activity_order_info_setting">OrderInfoSettingActivity</string>
+    <string name="title_activity_account">AccountActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
 </resources>
