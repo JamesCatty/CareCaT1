@@ -1,5 +1,6 @@
 package app.test.carecat.carecat1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -10,7 +11,10 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +22,7 @@ import java.util.List;
 public class CareCentreActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+    private Intent intent;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -42,11 +47,24 @@ public class CareCentreActivity extends AppCompatActivity {
     public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         private List<String> mData;
 
+        // 建立ViewHolder
         public class ViewHolder extends RecyclerView.ViewHolder {
+            // 宣告元件
             public TextView mTextView;
             public ViewHolder(View v) {
                 super(v);
                 mTextView = (TextView) v.findViewById(R.id.info_text);
+
+                // 點擊項目時
+                itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        Toast.makeText(view.getContext(),
+                                "click " +getAdapterPosition(),Toast.LENGTH_SHORT).show();
+                        intent = new Intent(CareCentreActivity.this, SingleCentreActivity.class);
+                        startActivity(intent);
+                    }
+                });
             }
         }
 
@@ -56,6 +74,7 @@ public class CareCentreActivity extends AppCompatActivity {
 
         @Override
         public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            // 連結項目布局檔list_item
             View v = LayoutInflater.from(parent.getContext())
                     .inflate(R.layout.item, parent, false);
             ViewHolder vh = new ViewHolder(v);
@@ -64,6 +83,7 @@ public class CareCentreActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
+            // 設置mTextView要顯示的內容
             holder.mTextView.setText(mData.get(position));
 
         }
@@ -83,8 +103,25 @@ public class CareCentreActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
+        //使用Spinner
+        Spinner careCentreCategory = (Spinner)findViewById(R.id.careCentreCategory);
+        ArrayAdapter<CharSequence> careCentreCategory_nAdapter = ArrayAdapter.createFromResource(
+                this, R.array.careCentreCategory_array, android.R.layout.simple_spinner_item );
+        careCentreCategory_nAdapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+        careCentreCategory.setAdapter(careCentreCategory_nAdapter);
+        String text = careCentreCategory.getSelectedItem().toString();
+
+        //使用Spinner
+        Spinner careCentreCity = (Spinner)findViewById(R.id.careCentreCity);
+        ArrayAdapter<CharSequence> careCentreCity_nAdapter = ArrayAdapter.createFromResource(
+                this, R.array.careCentreCity_array, android.R.layout.simple_spinner_item );
+        careCentreCity_nAdapter.setDropDownViewResource(
+                android.R.layout.simple_spinner_dropdown_item);
+        careCentreCity.setAdapter(careCentreCity_nAdapter);
+
         ArrayList<String> myDataset = new ArrayList<>();
-        for(int i = 0; i < 100; i++){
+        for(int i = 0; i < 10; i++){
             myDataset.add(i + "");
         }
         MyAdapter myAdapter = new MyAdapter(myDataset);

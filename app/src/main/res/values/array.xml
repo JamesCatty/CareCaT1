@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="careCentreCategory_array">
+       <item>長照機構</item>
+        <item>護理之家</item>
+    </array>>
+    <array name="careCentreCity_array">
+        <item>台北</item>
+        <item>新北</item>
+        <item>基隆</item>
+    </array>>
+
+</resources>
