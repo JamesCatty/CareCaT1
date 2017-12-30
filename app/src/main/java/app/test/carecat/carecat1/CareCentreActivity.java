@@ -100,8 +100,8 @@ public class CareCentreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_care_centre);
 
         mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        //BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+       // navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         //使用Spinner
         Spinner careCentreCategory = (Spinner)findViewById(R.id.careCentreCategory);

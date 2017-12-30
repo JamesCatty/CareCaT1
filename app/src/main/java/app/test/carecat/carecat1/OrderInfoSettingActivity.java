@@ -20,10 +20,13 @@ public class OrderInfoSettingActivity extends AppCompatActivity {
                 case R.id.navigation_home:
                     mTextMessage.setText(R.string.title_home);
                     return true;
-                case R.id.navigation_dashboard:
+                case R.id.navigation_calendar:
                     mTextMessage.setText(R.string.title_dashboard);
                     return true;
-                case R.id.navigation_notifications:
+                case R.id.navigation_chat:
+                    mTextMessage.setText(R.string.title_notifications);
+                    return true;
+                case R.id.navigation_person:
                     mTextMessage.setText(R.string.title_notifications);
                     return true;
             }

@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class SingleCentreActivity extends AppCompatActivity {
+public class OrderActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
 
@@ -37,7 +37,7 @@ public class SingleCentreActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_single_centre);
+        setContentView(R.layout.activity_order);
 
         mTextMessage = (TextView) findViewById(R.id.message);
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
