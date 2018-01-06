@@ -10,4 +10,8 @@
         <item>基隆</item>
     </array>>
 
+    <array name="serviceCategory_array">
+        <item>nurse</item>
+        <item>care people</item>
+    </array>>
 </resources>

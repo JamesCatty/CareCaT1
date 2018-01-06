@@ -103,7 +103,7 @@ public class CareCentreActivity extends AppCompatActivity {
         //BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
        // navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        //使用Spinner
+        // Spinner
         Spinner careCentreCategory = (Spinner)findViewById(R.id.careCentreCategory);
         ArrayAdapter<CharSequence> careCentreCategory_nAdapter = ArrayAdapter.createFromResource(
                 this, R.array.careCentreCategory_array, android.R.layout.simple_spinner_item );
@@ -112,7 +112,7 @@ public class CareCentreActivity extends AppCompatActivity {
         careCentreCategory.setAdapter(careCentreCategory_nAdapter);
         String text = careCentreCategory.getSelectedItem().toString();
 
-        //使用Spinner
+        // Spinner
         Spinner careCentreCity = (Spinner)findViewById(R.id.careCentreCity);
         ArrayAdapter<CharSequence> careCentreCity_nAdapter = ArrayAdapter.createFromResource(
                 this, R.array.careCentreCity_array, android.R.layout.simple_spinner_item );
@@ -120,6 +120,7 @@ public class CareCentreActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_dropdown_item);
         careCentreCity.setAdapter(careCentreCity_nAdapter);
 
+        //  RecyclerView
         ArrayList<String> myDataset = new ArrayList<>();
         for(int i = 0; i < 10; i++){
             myDataset.add(i + "");
