@@ -23,10 +23,13 @@ public class SearchActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private Button doSetDate;
     private Button doSetStartTime;
+    private Button doSetEndTime;
     private TextView textDate;
     private TextView textStart;
+    private TextView textEnd;
     private DatePickerDialog datePickDialog;
     private TimePickerDialog startTimePickDialog;
+    private TimePickerDialog endTimePickDialog;
     private GregorianCalendar calendar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -89,6 +92,14 @@ public class SearchActivity extends AppCompatActivity {
             }
         },calendar.get(Calendar.HOUR_OF_DAY),calendar.get(calendar.MINUTE),false);
 
+        // do endTimePickDialog
+        endTimePickDialog = new TimePickerDialog(this, new TimePickerDialog.OnTimeSetListener() {
+            @Override
+            public void onTimeSet(TimePicker view, int hour, int minute) {
+                textEnd.setText((hour > 12 ? hour - 12 : hour)+":"+minute+" "+(hour > 12 ? "PM" : "AM"));
+            }
+        },calendar.get(Calendar.HOUR_OF_DAY),calendar.get(calendar.MINUTE),false);
+
     }
 
     // 連接Layout
@@ -97,13 +108,19 @@ public class SearchActivity extends AppCompatActivity {
         textDate = (TextView) findViewById(R.id.datetext);
         doSetStartTime = (Button) findViewById(R.id.buttonStartTime);
         textStart = (TextView) findViewById(R.id.textStart);
+        doSetEndTime = (Button) findViewById(R.id.buttonEndTime);
+        textEnd = (TextView) findViewById(R.id.textEnd);
     }
     // setDate onclick
     public void setDate(View v){
         datePickDialog.show();
     }
-    // setDate onclick
+    // setStartTime onclick
     public void setStartTime(View v){
         startTimePickDialog.show();
+    }
+    // setEndTime onclick
+    public void setEndTime(View v){
+        endTimePickDialog.show();
     }
 }
