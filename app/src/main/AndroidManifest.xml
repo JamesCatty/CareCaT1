@@ -25,9 +25,7 @@
             android:label="@string/title_activity_about" />
         <activity
             android:name=".CareCentreActivity"
-            android:label="@string/title_activity_care_centre">
-
-        </activity>
+            android:label="@string/title_activity_care_centre"></activity>
         <activity
             android:name=".SingleCentreActivity"
             android:label="@string/title_activity_single_centre" />
@@ -36,20 +34,22 @@
             android:label="@string/title_activity_order_info_setting" />
         <activity
             android:name=".AccountActivity"
-            android:label="@string/title_activity_account">
-        </activity>
+            android:label="@string/title_activity_account"></activity>
         <activity
             android:name=".SearchActivity"
             android:label="@string/title_activity_search">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".OrderActivity"
-            android:label="@string/title_activity_order"></activity>
+            android:label="@string/title_activity_order" />
+        <activity
+            android:name=".NewTitleActivity"
+            android:label="@string/title_activity_new_title"></activity>
     </application>
 
 </manifest>
